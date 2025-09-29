@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moreh</title>
+  <link rel="icon" href="title.png" type="image/png" />
+  <style>
+/* Base Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* Section Styling */
+.services {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #1a1a1a;
+}
+
+/* List Item Styling (One by One) */
+.services .point {
+  margin: 30px auto;
+  max-width: 800px;
+  padding-left: 25px;
+  border-left: 4px solid #0a66c2;
+  transition: opacity 1s ease, transform 1s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.services .point.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.services h3 {
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+  color: #0a66c2;
+}
+
+.services p {
+  font-size: 1rem;
+  margin: 0;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .services h3 {
+    font-size: 1.2rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+ <!-- Why Choose Us -->
+  <!-- Why Choose Us -->
+<section class="services">
+  <div class="container">
+    <h2 class="section-title">Why Choose Moreh?</h2>
+
+    <div class="point fade-in-on-scroll">
+      <h3>✅ Fast Turnaround</h3>
+      <p>We fill your roles faster with quality candidates, every time.</p>
+    </div>
+
+    <div class="point fade-in-on-scroll">
+      <h3>✅ Personalized Service</h3>
+      <p>Your needs aren't generic. Neither are our solutions.</p>
+    </div>
+
+    <div class="point fade-in-on-scroll">
+      <h3>✅ Industry Expertise</h3>
+      <p>Our team has deep insights across domains, allowing us to provide the best-fit candidates with speed and precision.</p>
+    </div>
+
+    <div class="point fade-in-on-scroll">
+      <h3>✅ Quality Over Quantity</h3>
+      <p>We prioritize long-term success over short-term placement, ensuring client and candidate satisfaction.</p>
+    </div>
+
+    <div class="point fade-in-on-scroll">
+      <h3>✅ Tech-Driven Solutions</h3>
+      <p>We utilize the latest tech tools including AI and analytics to enhance recruitment efficiency and accuracy.</p>
+    </div>
+  </div>
+</section>
+
+
+</body>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
+</html>
+    
