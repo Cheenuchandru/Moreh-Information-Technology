@@ -448,12 +448,13 @@ footer .copyright {
 
 /* Media Query for small screens */
 @media (max-width: 480px) {
-  .splash-title {
-    font-size: 1.5rem;
+  .splash-logo {
+    width: 150px;   /* even smaller for very small screens */
+    max-width: 60%;
   }
 
-  .splash-logo {
-    width: 90px;
+  .splash-title {
+    font-size: 1rem;
   }
 }
 
@@ -507,5 +508,47 @@ footer .copyright {
 
   .services h3 {
     font-size: 1.2rem;
+  }
+}
+
+
+/* Mobile Fixes */
+@media (max-width: 768px) {
+    .splash-logo {
+    width: 200px;   /* smaller logo */
+    max-width: 70%;
+  }
+
+  .splash-title {
+    font-size: 1.2rem; /* smaller welcome text */
+    margin-top: 15px;
+  }
+  .hero h1 {
+    font-size: 1.5rem;   /* smaller font */
+    white-space: normal; /* allow wrapping */
+    animation: none;     /* stop sliding on small screens */
+  }
+
+  .hero p {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+
+  .testimonial-wrapper {
+    max-width: 100%;  /* allow full width slider */
+  }
+
+  .grid-2 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .para {
+    font-size: 1rem;
+    padding: 10px;
   }
 }
