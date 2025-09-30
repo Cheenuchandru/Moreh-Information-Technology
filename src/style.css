@@ -513,42 +513,81 @@ footer .copyright {
 
 
 /* Mobile Fixes */
+/* Mobile View Adjustments */
 @media (max-width: 768px) {
-    .splash-logo {
-    width: 200px;   /* smaller logo */
+  /* Splash Screen */
+  .splash-logo {
+    width: 180px;
     max-width: 70%;
   }
 
   .splash-title {
-    font-size: 1.2rem; /* smaller welcome text */
+    font-size: 1.1rem;
     margin-top: 15px;
   }
+
+  /* Hero Section */
   .hero h1 {
-    font-size: 1.5rem;   /* smaller font */
-    white-space: normal; /* allow wrapping */
-    animation: none;     /* stop sliding on small screens */
+    font-size: 1.6rem;
+    white-space: normal;
+    text-align: center;
+    animation: none; /* stop sliding on mobile */
+    line-height: 1.3;
   }
 
   .hero p {
     font-size: 1rem;
+    padding: 5px 8px;
+  }
+
+  .hero1 p {
+    font-size: 1rem;
     padding: 5px 10px;
   }
 
-  .testimonial-wrapper {
-    max-width: 100%;  /* allow full width slider */
-  }
-
-  .grid-2 {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .card {
-    max-width: 100%;
-  }
-
-  .para {
+  /* Articles */
+  .article-card h3 {
     font-size: 1rem;
-    padding: 10px;
+  }
+
+  /* Paragraph section */
+  .para {
+    font-size: 0.95rem;
+    padding: 10px 15px;
+  }
+
+  /* Services Section */
+  .services h3, .services1 h3 {
+    font-size: 1.1rem;
+  }
+
+  .services p, .services1 p {
+    font-size: 0.95rem;
+  }
+
+  /* Testimonial slider */
+  .testimonial-slide {
+    font-size: 0.95rem;
+    padding: 15px 8px;
+  }
+
+  /* Cards */
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  /* Footer */
+  footer, .footer-columns p, .footer-columns ul li a {
+    font-size: 0.85rem;
+  }
+
+  /* Adjust spacing */
+  .articles, .services, .services1, .hero, .para {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
